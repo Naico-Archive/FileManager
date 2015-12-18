@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oh-gK-vC8">
+                                <rect key="frame" x="20" y="20" width="223" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="7D9-ok-g4E"/>
+                                </constraints>
+                                <state key="normal" title="Create File"/>
+                                <connections>
+                                    <action selector="btnCreateFileTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yn7-cK-d4Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toM-bc-88k">
+                                <rect key="frame" x="20" y="49" width="223" height="30"/>
+                                <animations/>
+                                <state key="normal" title="List Directory"/>
+                                <connections>
+                                    <action selector="btnListFilesTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nW3-3K-Hb8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSc-cx-ZQg">
+                                <rect key="frame" x="20" y="87" width="223" height="30"/>
+                                <animations/>
+                                <state key="normal" title="View File Content"/>
+                                <connections>
+                                    <action selector="btnViewFileTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kip-L6-Tve"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSE-XS-oci">
+                                <rect key="frame" x="20" y="125" width="223" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Delete File"/>
+                                <connections>
+                                    <action selector="btnDeleteFileTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yUt-qe-URL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZs-7k-lKz">
+                                <rect key="frame" x="0.0" y="163" width="600" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKZ-0Z-wR5" customClass="EZAudioPlot">
+                                <rect key="frame" x="0.0" y="192" width="600" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8t3-1o-lIo"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G4s-3T-Quq">
+                                <rect key="frame" x="0.0" y="328" width="600" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="LaI-Jk-z9P"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNf-Tx-BOX">
+                                <rect key="frame" x="433" y="20" width="147" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="0mr-cl-0q7"/>
+                                </constraints>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="btnRecordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5H-Bm-lUO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="toM-bc-88k" firstAttribute="trailing" secondItem="8Oh-gK-vC8" secondAttribute="trailing" id="3A9-fu-E8J"/>
+                            <constraint firstItem="xKZ-0Z-wR5" firstAttribute="top" secondItem="wZs-7k-lKz" secondAttribute="bottom" constant="8" id="6D7-oJ-MqV"/>
+                            <constraint firstItem="xKZ-0Z-wR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7YV-5p-TZA"/>
+                            <constraint firstItem="wZs-7k-lKz" firstAttribute="top" secondItem="hSE-XS-oci" secondAttribute="bottom" constant="8" id="ADV-1G-gF0"/>
+                            <constraint firstItem="kSc-cx-ZQg" firstAttribute="leading" secondItem="toM-bc-88k" secondAttribute="leading" id="Jjl-5f-mt0"/>
+                            <constraint firstItem="G4s-3T-Quq" firstAttribute="top" secondItem="xKZ-0Z-wR5" secondAttribute="bottom" constant="8" id="KBC-fq-Fbp"/>
+                            <constraint firstItem="G4s-3T-Quq" firstAttribute="centerX" secondItem="xKZ-0Z-wR5" secondAttribute="centerX" id="QWe-qT-nxr"/>
+                            <constraint firstItem="kSc-cx-ZQg" firstAttribute="top" secondItem="toM-bc-88k" secondAttribute="bottom" constant="8" symbolic="YES" id="S0j-MP-Gm8"/>
+                            <constraint firstItem="G4s-3T-Quq" firstAttribute="width" secondItem="xKZ-0Z-wR5" secondAttribute="width" id="Too-Vt-HWi"/>
+                            <constraint firstItem="8Oh-gK-vC8" firstAttribute="leading" secondItem="toM-bc-88k" secondAttribute="leading" id="VJJ-I6-cNW"/>
+                            <constraint firstItem="hSE-XS-oci" firstAttribute="top" secondItem="kSc-cx-ZQg" secondAttribute="bottom" constant="8" symbolic="YES" id="Wq7-yp-saw"/>
+                            <constraint firstItem="kSc-cx-ZQg" firstAttribute="leading" secondItem="hSE-XS-oci" secondAttribute="leading" id="a4k-Vm-YFM"/>
+                            <constraint firstItem="toM-bc-88k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="bNk-8G-Njg"/>
+                            <constraint firstItem="wZs-7k-lKz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cg0-pX-qHF"/>
+                            <constraint firstItem="xKZ-0Z-wR5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gNf-de-aBp"/>
+                            <constraint firstItem="8Oh-gK-vC8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kqU-hS-GeD"/>
+                            <constraint firstItem="QNf-Tx-BOX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lhf-va-ZR5"/>
+                            <constraint firstItem="toM-bc-88k" firstAttribute="trailing" secondItem="kSc-cx-ZQg" secondAttribute="trailing" id="p16-Ch-OtD"/>
+                            <constraint firstItem="wZs-7k-lKz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="q6S-8g-igK"/>
+                            <constraint firstItem="kSc-cx-ZQg" firstAttribute="trailing" secondItem="hSE-XS-oci" secondAttribute="trailing" id="vcq-Wy-tJW"/>
+                            <constraint firstItem="kSc-cx-ZQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wMS-1b-oPJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QNf-Tx-BOX" secondAttribute="trailing" id="zwk-5x-hbk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnRecord" destination="QNf-Tx-BOX" id="kDx-D9-eui"/>
+                        <outlet property="displayGraph" destination="xKZ-0Z-wR5" id="A1q-s8-KlU"/>
+                        <outlet property="lblLog" destination="wZs-7k-lKz" id="VJy-3w-16J"/>
+                        <outlet property="logTextBox" destination="G4s-3T-Quq" id="arY-3i-Hjo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="215"/>
+        </scene>
+    </scenes>
+</document>
