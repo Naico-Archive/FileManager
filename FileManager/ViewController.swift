@@ -10,14 +10,14 @@ import UIKit
 import SwiftFilePath
 import EZAudio
 
-class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate {
+class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate, EZAudioPlayerDelegate {
 
     let mainDir = "fileMangerDir"
     let audioDir = "audioDir"
     
     var microphone: EZMicrophone!;
     var recorder: EZRecorder!
-    var player: EZAudioPlayer!
+//    var player: EZAudioPlayer!
     var isRecording = false
     var fileUrl = NSURL!()
     
@@ -52,6 +52,8 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
                 logTextBox.text = logTextBox.text + " " + content.basename.description + " " + (content.attributes?.fileSize().description)!
             }
         }
+        logTextBox.scrollsToBottom()
+        
     }
     
     @IBAction func btnViewFileTapped(sender: AnyObject) {
@@ -69,6 +71,7 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
 //            }
 //            tempAudio.touch()
             self.microphone.startFetchingAudio()
+            self.displayGraph.plotType = .Rolling
 //            self.recorder.cl
             self.isRecording = true
             btnRecord.setTitle("Stop Recording", forState: UIControlState.Normal)
@@ -85,9 +88,7 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
                     destAudio.remove()
                 }
                 tempAudio.copyTo(destAudio)
-                tempAudio.remove()
-                tempAudio.touch()
-                displayGraph.clear()
+	                displayGraph.clear()
                 
                 self.fileUrl = NSURL(fileURLWithPath: Path.documentsDir[mainDir][audioDir]["audioTemp.m4a"].toString(), isDirectory: false)
                 self.recorder = EZRecorder(URL: self.fileUrl,
@@ -101,6 +102,23 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
         }
     }
     
+    @IBAction func btnPlayTapped(sender: AnyObject) {
+        self.microphone.stopFetchingAudio()
+        
+        let url = NSURL(fileURLWithPath: Path.documentsDir[mainDir][audioDir]["audio1.m4a"].toString(), isDirectory: false)
+        let audioFile = EZAudioFile(URL: url)
+//        recorder.closeAudioFile()
+        if EZAudioPlayer.sharedAudioPlayer() == nil {
+            print("sdfsfsdf")
+        }
+        
+        EZAudioPlayer.sharedAudioPlayer().delegate = self// = EZAudioPlayer(delegate: self)
+        EZAudioPlayer.sharedAudioPlayer().audioFile = audioFile
+        EZAudioPlayer.sharedAudioPlayer().volume = 1
+        EZAudioPlayer.sharedAudioPlayer().play()
+        self.displayGraph.plotType = .Buffer
+    }
+    
     //Mark Audio Functions
     func microphone(microphone: EZMicrophone!, hasBufferList bufferList: UnsafeMutablePointer<AudioBufferList>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
         if isRecording{
@@ -112,6 +130,20 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.displayGraph?.updateBuffer(buffer[0], withBufferSize: bufferSize);
         });
+    }
+    
+    func audioPlayer(audioPlayer: EZAudioPlayer!, updatedPosition framePosition: Int64, inAudioFile audioFile: EZAudioFile!) {
+        
+    }
+    
+    func audioPlayer(audioPlayer: EZAudioPlayer!, reachedEndOfAudioFile audioFile: EZAudioFile!) {
+        self.displayGraph.clear()
+    }
+    
+    func audioPlayer(audioPlayer: EZAudioPlayer!, playedAudio buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32, inAudioFile audioFile: EZAudioFile!) {
+//        if isPause == true {
+            self.displayGraph.updateBuffer(buffer[0], withBufferSize: bufferSize)
+//        }
     }
     
     //End Mark
@@ -144,7 +176,8 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
             fileType: EZRecorderFileType.M4A,
             delegate: self)
         
-        self.recorder.delegate = self
+//        self.player = EZAudioPlayer(delegate: self)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -153,5 +186,12 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
     }
 
 
+}
+
+extension UITextView{
+    func scrollsToBottom() {
+        let range = NSMakeRange(self.text.characters.count - 1, 1);
+        self.scrollRangeToVisible(range)
+    }
 }
 
