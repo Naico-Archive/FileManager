@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomImageView" customModule="FileManager" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="DJm-x3-Sm6" id="F23-SW-7jj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJm-x3-Sm6">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <animations/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwt-zS-q2g">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <animations/>
+                    <connections>
+                        <action selector="btnImageButtonTapped:" destination="-1" eventType="touchUpInside" id="qth-E6-b5W"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Fwt-zS-q2g" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="4co-Cf-x9b"/>
+                <constraint firstItem="Fwt-zS-q2g" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="60E-ly-Ml5"/>
+                <constraint firstItem="DJm-x3-Sm6" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="7Nn-Ts-wfk"/>
+                <constraint firstItem="Fwt-zS-q2g" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Rgj-e8-fqY"/>
+                <constraint firstItem="DJm-x3-Sm6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SNv-Ek-pU0"/>
+                <constraint firstItem="Fwt-zS-q2g" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="X3l-v6-M3B"/>
+                <constraint firstItem="DJm-x3-Sm6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bTc-wB-aQZ"/>
+                <constraint firstItem="DJm-x3-Sm6" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="oXg-dx-IUz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="171.5" y="140.5"/>
+        </view>
+    </objects>
+</document>

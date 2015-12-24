@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sel-9T-Hvi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -57,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="163" width="600" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKZ-0Z-wR5" customClass="EZAudioPlot">
@@ -142,5 +143,79 @@
             </objects>
             <point key="canvasLocation" x="418" y="215"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="PAF-fb-wvZ">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sel-9T-Hvi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w4Y-R2-6Z2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZQX-oB-N9T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BC5-p8-QHv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZI-oN-ZYC" customClass="CustomImageView" customModule="FileManager" customModuleProvider="target">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bZI-oN-ZYC" secondAttribute="height" multiplier="1:1" id="dHb-TS-ynl"/>
+                                    <constraint firstAttribute="height" constant="200" id="xhM-9v-v0j"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backGroundImage" value="background images"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="background images"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="BackgroundImage" value="background images"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.8862745098" green="0.89411764709999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bZI-oN-ZYC" firstAttribute="centerX" secondItem="BC5-p8-QHv" secondAttribute="centerX" id="FPo-b6-FDe"/>
+                            <constraint firstItem="bZI-oN-ZYC" firstAttribute="centerY" secondItem="BC5-p8-QHv" secondAttribute="centerY" id="Ro5-sX-vqF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AN3-8U-HSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="215"/>
+        </scene>
+        <!--Image Editor View Controller-->
+        <scene sceneID="FXV-AY-xhJ">
+            <objects>
+                <viewController storyboardIdentifier="ImageEditorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rfb-jb-aK9" customClass="ImageEditorViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mMM-Ki-ReW"/>
+                        <viewControllerLayoutGuide type="bottom" id="SlZ-BP-gpp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dfR-re-H6i">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Editor View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kF-Ru-rgS">
+                                <rect key="frame" x="191" y="289" width="218" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0kF-Ru-rgS" firstAttribute="centerY" secondItem="dfR-re-H6i" secondAttribute="centerY" id="63l-Y0-7EZ"/>
+                            <constraint firstItem="0kF-Ru-rgS" firstAttribute="centerX" secondItem="dfR-re-H6i" secondAttribute="centerX" id="xO8-ye-45c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9JK-gg-nLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1987" y="222"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="background images" width="1240" height="905"/>
+    </resources>
 </document>

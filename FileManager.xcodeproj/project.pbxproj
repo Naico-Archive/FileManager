@@ -12,6 +12,12 @@
 		853E810C1C22873900C16CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853E810A1C22873900C16CFE /* Main.storyboard */; };
 		853E810E1C22873900C16CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853E810D1C22873900C16CFE /* Assets.xcassets */; };
 		853E81111C22873900C16CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853E810F1C22873900C16CFE /* LaunchScreen.storyboard */; };
+		8598D9381C2BB87A00700949 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8598D9371C2BB87A00700949 /* SecondViewController.swift */; };
+		8598D93A1C2BCA9400700949 /* CustomImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8598D9391C2BCA9400700949 /* CustomImageView.xib */; };
+		8598D93C1C2BCB2300700949 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8598D93B1C2BCB2300700949 /* CustomImageView.swift */; };
+		8598D93E1C2BEF4A00700949 /* ImageEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8598D93D1C2BEF4A00700949 /* ImageEditorViewController.swift */; };
+		85DB24B01C29814C00C600CF /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85DB24AF1C29814C00C600CF /* CustomView.xib */; };
+		85DB24B21C2981DE00C600CF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB24B11C2981DE00C600CF /* CustomView.swift */; };
 		A7860B6CB2A57518B978053F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408681B44FE5C9092F3BE7DA /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +31,12 @@
 		853E810D1C22873900C16CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853E81101C22873900C16CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		853E81121C22873900C16CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8598D9371C2BB87A00700949 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		8598D9391C2BCA9400700949 /* CustomImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomImageView.xib; sourceTree = "<group>"; };
+		8598D93B1C2BCB2300700949 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		8598D93D1C2BEF4A00700949 /* ImageEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEditorViewController.swift; sourceTree = "<group>"; };
+		85DB24AF1C29814C00C600CF /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		85DB24B11C2981DE00C600CF /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		BB014D51B41973880535A194 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +79,12 @@
 				853E810D1C22873900C16CFE /* Assets.xcassets */,
 				853E810F1C22873900C16CFE /* LaunchScreen.storyboard */,
 				853E81121C22873900C16CFE /* Info.plist */,
+				85DB24AF1C29814C00C600CF /* CustomView.xib */,
+				85DB24B11C2981DE00C600CF /* CustomView.swift */,
+				8598D9371C2BB87A00700949 /* SecondViewController.swift */,
+				8598D9391C2BCA9400700949 /* CustomImageView.xib */,
+				8598D93B1C2BCB2300700949 /* CustomImageView.swift */,
+				8598D93D1C2BEF4A00700949 /* ImageEditorViewController.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -155,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				853E81111C22873900C16CFE /* LaunchScreen.storyboard in Resources */,
+				8598D93A1C2BCA9400700949 /* CustomImageView.xib in Resources */,
+				85DB24B01C29814C00C600CF /* CustomView.xib in Resources */,
 				853E810E1C22873900C16CFE /* Assets.xcassets in Resources */,
 				853E810C1C22873900C16CFE /* Main.storyboard in Resources */,
 			);
@@ -215,8 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8598D9381C2BB87A00700949 /* SecondViewController.swift in Sources */,
+				85DB24B21C2981DE00C600CF /* CustomView.swift in Sources */,
 				853E81091C22873900C16CFE /* ViewController.swift in Sources */,
+				8598D93E1C2BEF4A00700949 /* ImageEditorViewController.swift in Sources */,
 				853E81071C22873900C16CFE /* AppDelegate.swift in Sources */,
+				8598D93C1C2BCB2300700949 /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
