@@ -6,15 +6,18 @@ PODS:
     - EZAudio/Core
     - TPCircularBuffer (~> 0.0)
   - SwiftFilePath (0.0.6)
+  - TOCropViewController (1.1.3)
   - TPCircularBuffer (0.0.1)
 
 DEPENDENCIES:
   - EZAudio (~> 1.1.2)
   - SwiftFilePath
+  - TOCropViewController
 
 SPEC CHECKSUMS:
   EZAudio: 01373de2b1257b77be1bf13753fb1c4ea8a9777e
   SwiftFilePath: 52c1db61018e0a3941191eb71002cb5cbdaa39e7
+  TOCropViewController: ae704138965098efd89c4cb7272c2a311f562ddb
   TPCircularBuffer: 949e9632b9fb99b7274d7b2296ee22bff5841e35
 
 COCOAPODS: 0.39.0

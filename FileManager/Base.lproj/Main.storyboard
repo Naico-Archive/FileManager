@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sel-9T-Hvi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sel-9T-Hvi">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -194,23 +194,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Editor View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kF-Ru-rgS">
-                                <rect key="frame" x="191" y="289" width="218" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background images" translatesAutoresizingMaskIntoConstraints="NO" id="ZhJ-e9-Qp5">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3V-QW-mIa">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dTq-uL-rXn"/>
+                                </constraints>
+                                <items/>
+                            </toolbar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0kF-Ru-rgS" firstAttribute="centerY" secondItem="dfR-re-H6i" secondAttribute="centerY" id="63l-Y0-7EZ"/>
-                            <constraint firstItem="0kF-Ru-rgS" firstAttribute="centerX" secondItem="dfR-re-H6i" secondAttribute="centerX" id="xO8-ye-45c"/>
+                            <constraint firstItem="SlZ-BP-gpp" firstAttribute="top" secondItem="B3V-QW-mIa" secondAttribute="bottom" id="6rh-qv-0Vb"/>
+                            <constraint firstItem="B3V-QW-mIa" firstAttribute="width" secondItem="dfR-re-H6i" secondAttribute="width" id="DaY-7K-TKw"/>
+                            <constraint firstItem="B3V-QW-mIa" firstAttribute="centerX" secondItem="dfR-re-H6i" secondAttribute="centerX" id="Lw2-cE-WtS"/>
+                            <constraint firstItem="ZhJ-e9-Qp5" firstAttribute="width" secondItem="dfR-re-H6i" secondAttribute="width" id="M1W-Wd-u90"/>
+                            <constraint firstItem="ZhJ-e9-Qp5" firstAttribute="top" secondItem="mMM-Ki-ReW" secondAttribute="bottom" id="Y0O-2U-XiX"/>
+                            <constraint firstItem="B3V-QW-mIa" firstAttribute="top" secondItem="ZhJ-e9-Qp5" secondAttribute="bottom" id="hMF-S8-Cfz"/>
+                            <constraint firstItem="ZhJ-e9-Qp5" firstAttribute="centerX" secondItem="dfR-re-H6i" secondAttribute="centerX" id="pZy-Sr-XDq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tgz-0t-MAT">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="RCH-1a-Jfy">
+                            <connections>
+                                <action selector="btnCloseTapped:" destination="Rfb-jb-aK9" id="tQ8-U2-I6f"/>
+                            </connections>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="1VC-0N-EPk">
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="XaD-ty-mWb">
+                            <connections>
+                                <action selector="btnEditImageTapped:" destination="Rfb-jb-aK9" id="Si4-rV-5jK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editImage" destination="ZhJ-e9-Qp5" id="G5N-v3-NwL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9JK-gg-nLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799" y="222"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Khx-2R-ADh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="222-cD-GUn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p32-dJ-Ihb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rfb-jb-aK9" kind="relationship" relationship="rootViewController" id="q4k-Gy-ZXk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fB-Gb-GTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1987" y="222"/>
         </scene>

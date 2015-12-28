@@ -86,10 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/EZAudio.framework"
   install_framework "Pods/SwiftFilePath.framework"
+  install_framework "Pods/TOCropViewController.framework"
   install_framework "Pods/TPCircularBuffer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/EZAudio.framework"
   install_framework "Pods/SwiftFilePath.framework"
+  install_framework "Pods/TOCropViewController.framework"
   install_framework "Pods/TPCircularBuffer.framework"
 fi

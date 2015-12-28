@@ -7,9 +7,28 @@
 //
 
 import UIKit
+import TOCropViewController
 
-class ImageEditorViewController: UIViewController {
-
+class ImageEditorViewController: UIViewController, TOCropViewControllerDelegate {
+    
+    @IBOutlet weak var editImage: UIImageView!
+    var cropViewController = TOCropViewController()
+    
+    @IBAction func btnEditImageTapped(sender: AnyObject) {
+        let image = UIImage(named: "background images")
+        self.cropViewController = TOCropViewController(image: image)
+        self.cropViewController.delegate = self
+        self.presentViewController(cropViewController, animated: true, completion: nil)
+    }
+    
+    func cropViewController(cropViewController: TOCropViewController!, didCropToImage image: UIImage!, withRect cropRect: CGRect, angle: Int) {
+        self.editImage.image = image
+        self.cropViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func btnCloseTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

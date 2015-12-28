@@ -22,8 +22,8 @@ import UIKit
         let vc = self.parentViewController!.storyboard!.instantiateViewControllerWithIdentifier("ImageEditorViewController") as! ImageEditorViewController
         
         let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = UIModalPresentationStyle.PageSheet
-        let popover = nav.popoverPresentationController
+        nav.modalPresentationStyle = UIModalPresentationStyle.FormSheet
+//        let popover = nav.popoverPresentationController
 //        popover?.delegate = self.parentViewController
 //        vc.preferredContentSize = CGSizeMake(450,600)
         

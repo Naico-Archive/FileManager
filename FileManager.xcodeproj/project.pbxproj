@@ -141,9 +141,10 @@
 				TargetAttributes = {
 					853E81021C22873900C16CFE = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 3PM6BBV4N5;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -354,6 +355,7 @@
 			baseConfigurationReference = BB014D51B41973880535A194 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FileManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bsm.FileManager;
@@ -366,6 +368,7 @@
 			baseConfigurationReference = 08E4D54100E62A7B1202B48C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FileManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bsm.FileManager;
