@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '07435499E9397409E80D5241'
+               BlueprintIdentifier = '45F7C53C88B0FB0A55230587'
                BlueprintName = 'SwiftFilePath'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SwiftFilePath.framework'>

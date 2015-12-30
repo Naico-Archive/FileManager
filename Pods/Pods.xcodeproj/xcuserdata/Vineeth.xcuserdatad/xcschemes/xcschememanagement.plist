@@ -9,12 +9,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>SwiftFilePath.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TOCropViewController-TOCropViewControllerBundle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TOCropViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,17 +47,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>242AE5A6EAFF5533F7412F00B885851D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5855D213D188EE14086C1F827DE7B1FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>600491B5128F3B79BFAEB548427D32F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>749C0EB3637427537A4440E7DDD7637C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A065AE49C9E63F308170DB1B8FA6DC6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B030CC36140CDA61E12AD86F38CEB10A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F869623A13F2679FA5C9A8CA729CF562</key>
+		<key>B4483A4F73B7A4F9F1423A3509F141D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

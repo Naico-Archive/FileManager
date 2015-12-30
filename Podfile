@@ -6,3 +6,4 @@ use_frameworks!
 pod 'SwiftFilePath'
 pod 'EZAudio', '~> 1.1.2'
 pod 'TOCropViewController'
+pod 'IQKeyboardManager'

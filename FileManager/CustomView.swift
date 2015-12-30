@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable class CustomView: UIView {
 
+    @IBOutlet weak var myTextView: UITextView!
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -20,6 +21,15 @@ import UIKit
     // Our custom view from the XIB file
     var view: UIView!
     
+    @IBAction func micBtnTapped(sender: AnyObject) {
+        print("micBtnTapped")
+        let vc = self.parentViewController!.storyboard!.instantiateViewControllerWithIdentifier("CommentsDetailedViewController") as! CommentsDetailedViewController
+        
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = UIModalPresentationStyle.FormSheet
+        self.parentViewController!.presentViewController(nav, animated: true, completion: nil)
+        
+    }
     func xibSetup() {
         view = loadViewFromNib()
         
@@ -29,6 +39,10 @@ import UIKit
         // Make the view stretch with containing view
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         // Adding custom subview on top of our view (over any custom drawing > see note below)
+        
+        myTextView.clipsToBounds = true;
+        myTextView.layer.cornerRadius = 10.0;
+
         addSubview(view)
     }
     
@@ -49,6 +63,7 @@ import UIKit
         
         // 3. Setup view from .xib file
         xibSetup()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
