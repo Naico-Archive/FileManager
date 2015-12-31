@@ -26,6 +26,14 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
     @IBOutlet weak var displayGraph: EZAudioPlot!
     @IBOutlet weak var lblLog: UILabel!
     
+    
+    @IBAction func btnViewHeader(sender: AnyObject) {
+        
+        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("HeaderTableViewCell") as! HeaderTableViewCell
+           self.showViewController(vc as UITableViewController, sender: vc)
+    }
+    
+    
     @IBAction func btnCreateFileTapped(sender: AnyObject) {
         let dir = Path.documentsDir[mainDir]
         if dir.exists{
