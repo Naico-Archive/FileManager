@@ -32,8 +32,7 @@ class HeaderTableViewCell: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-     
+
         return 50.0
     }
 
