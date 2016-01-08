@@ -22,6 +22,10 @@
 		85DB24B01C29814C00C600CF /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85DB24AF1C29814C00C600CF /* CustomView.xib */; };
 		85DB24B21C2981DE00C600CF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB24B11C2981DE00C600CF /* CustomView.swift */; };
 		A7860B6CB2A57518B978053F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408681B44FE5C9092F3BE7DA /* Pods.framework */; };
+		D7E32BB11C34E8C300EE6277 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E32BB01C34E8C300EE6277 /* HeaderView.xib */; };
+		D7E32BB31C34E98700EE6277 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32BB21C34E98700EE6277 /* HeaderView.swift */; };
+		D7E32BB51C34EABD00EE6277 /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32BB41C34EABD00EE6277 /* headerCell.swift */; };
+		D7E32BB71C34EB2100EE6277 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32BB61C34EB2100EE6277 /* HeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		85DB24AF1C29814C00C600CF /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		85DB24B11C2981DE00C600CF /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		BB014D51B41973880535A194 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D7E32BB01C34E8C300EE6277 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		D7E32BB21C34E98700EE6277 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D7E32BB41C34EABD00EE6277 /* headerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerCell.swift; sourceTree = "<group>"; };
+		D7E32BB61C34EB2100EE6277 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,10 @@
 				8598D93D1C2BEF4A00700949 /* ImageEditorViewController.swift */,
 				85C6B6001C3A532400869B7B /* TabletoPDFTableViewController.swift */,
 				85C6B6021C3A58A800869B7B /* PDFViewerControllerViewController.swift */,
+				D7E32BB01C34E8C300EE6277 /* HeaderView.xib */,
+				D7E32BB21C34E98700EE6277 /* HeaderView.swift */,
+				D7E32BB41C34EABD00EE6277 /* headerCell.swift */,
+				D7E32BB61C34EB2100EE6277 /* HeaderTableViewCell.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -185,6 +197,7 @@
 				853E81111C22873900C16CFE /* LaunchScreen.storyboard in Resources */,
 				8598D93A1C2BCA9400700949 /* CustomImageView.xib in Resources */,
 				85DB24B01C29814C00C600CF /* CustomView.xib in Resources */,
+				D7E32BB11C34E8C300EE6277 /* HeaderView.xib in Resources */,
 				853E810E1C22873900C16CFE /* Assets.xcassets in Resources */,
 				853E810C1C22873900C16CFE /* Main.storyboard in Resources */,
 			);
@@ -253,7 +266,10 @@
 				853E81091C22873900C16CFE /* ViewController.swift in Sources */,
 				8598D93E1C2BEF4A00700949 /* ImageEditorViewController.swift in Sources */,
 				853E81071C22873900C16CFE /* AppDelegate.swift in Sources */,
+				D7E32BB71C34EB2100EE6277 /* HeaderTableViewCell.swift in Sources */,
 				8598D93C1C2BCB2300700949 /* CustomImageView.swift in Sources */,
+				D7E32BB31C34E98700EE6277 /* HeaderView.swift in Sources */,
+				D7E32BB51C34EABD00EE6277 /* headerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="FileManager" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgc-6i-oUI">
+                    <rect key="frame" x="0.0" y="0.0" width="81" height="48"/>
+                    <state key="normal" title="a"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyG-Ap-foQ">
+                    <rect key="frame" x="81" y="0.0" width="81" height="48"/>
+                    <state key="normal" title="b"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnO-zs-c3N">
+                    <rect key="frame" x="162" y="0.0" width="81" height="48"/>
+                    <state key="normal" title="c"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-H7-a6y">
+                    <rect key="frame" x="243" y="0.0" width="81" height="48"/>
+                    <state key="normal" title="d"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="wgc-6i-oUI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3xi-Ok-11P"/>
+                <constraint firstAttribute="trailing" secondItem="v1b-H7-a6y" secondAttribute="trailing" constant="-1" id="FNI-Fe-nI0"/>
+                <constraint firstItem="wgc-6i-oUI" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="NH8-rT-al0"/>
+                <constraint firstItem="wgc-6i-oUI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Yln-uI-vsO"/>
+                <constraint firstItem="eyG-Ap-foQ" firstAttribute="centerY" secondItem="wgc-6i-oUI" secondAttribute="centerY" id="bHW-yC-hZQ"/>
+                <constraint firstItem="v1b-H7-a6y" firstAttribute="centerY" secondItem="BnO-zs-c3N" secondAttribute="centerY" id="d5c-fr-F19"/>
+                <constraint firstItem="v1b-H7-a6y" firstAttribute="leading" secondItem="BnO-zs-c3N" secondAttribute="trailing" id="edE-41-a58"/>
+                <constraint firstItem="BnO-zs-c3N" firstAttribute="width" secondItem="eyG-Ap-foQ" secondAttribute="width" id="hdG-a2-7UX"/>
+                <constraint firstItem="wgc-6i-oUI" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.25" id="hgo-kk-PxG"/>
+                <constraint firstItem="eyG-Ap-foQ" firstAttribute="width" secondItem="wgc-6i-oUI" secondAttribute="width" id="i24-xK-dxn"/>
+                <constraint firstItem="v1b-H7-a6y" firstAttribute="width" secondItem="BnO-zs-c3N" secondAttribute="width" id="kf6-41-KHZ"/>
+                <constraint firstItem="eyG-Ap-foQ" firstAttribute="leading" secondItem="wgc-6i-oUI" secondAttribute="trailing" id="lok-Y2-Rro"/>
+                <constraint firstItem="BnO-zs-c3N" firstAttribute="height" secondItem="eyG-Ap-foQ" secondAttribute="height" id="o4Q-7n-huW"/>
+                <constraint firstItem="BnO-zs-c3N" firstAttribute="leading" secondItem="eyG-Ap-foQ" secondAttribute="trailing" id="ov8-FF-jLT"/>
+                <constraint firstItem="v1b-H7-a6y" firstAttribute="height" secondItem="BnO-zs-c3N" secondAttribute="height" id="tM1-o8-ud6"/>
+                <constraint firstItem="BnO-zs-c3N" firstAttribute="centerY" secondItem="eyG-Ap-foQ" secondAttribute="centerY" id="vVI-Oq-b3W"/>
+                <constraint firstItem="eyG-Ap-foQ" firstAttribute="height" secondItem="wgc-6i-oUI" secondAttribute="height" id="y8q-x1-jyT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="384.5" y="265"/>
+        </view>
+    </objects>
+</document>
