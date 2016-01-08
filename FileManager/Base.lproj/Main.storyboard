@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sel-9T-Hvi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gQp-Ef-5nF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="418" y="215"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="PAF-fb-wvZ">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sel-9T-Hvi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sel-9T-Hvi" customClass="SecondViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w4Y-R2-6Z2"/>
                         <viewControllerLayoutGuide type="bottom" id="ZQX-oB-N9T"/>
@@ -179,6 +179,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AN3-8U-HSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1192" y="215"/>
+        </scene>
+        <!--TabletoPDF Table View Controller-->
+        <scene sceneID="CIH-g6-Qsp">
+            <objects>
+                <tableViewController id="bF2-TR-YSr" customClass="TabletoPDFTableViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FgL-Gd-thj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" textLabel="Xg7-Gq-q52" style="IBUITableViewCellStyleDefault" id="28z-Vd-gGM">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="28z-Vd-gGM" id="n2H-Ed-BBU">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xg7-Gq-q52">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bF2-TR-YSr" id="hgo-r4-du5"/>
+                            <outlet property="delegate" destination="bF2-TR-YSr" id="uVP-pM-dfq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="oMQ-d7-ufS">
+                        <barButtonItem key="leftBarButtonItem" title="Web Veiw" id="THs-yQ-Rqo">
+                            <connections>
+                                <segue destination="13z-yt-l3r" kind="showDetail" id="zcV-yY-BfU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Convert to PDF" id="ug8-1k-UQE">
+                            <connections>
+                                <action selector="btnConverttoPDFTapped:" destination="bF2-TR-YSr" id="wxG-yA-hmu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XkK-4a-y4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="922"/>
+        </scene>
+        <!--Viewer Controller View Controller-->
+        <scene sceneID="Y36-ZH-NiY">
+            <objects>
+                <viewController id="Uft-k9-xjJ" customClass="PDFViewerControllerViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hql-TC-Tzv"/>
+                        <viewControllerLayoutGuide type="bottom" id="yNj-KF-WFW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oav-kt-kNo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7W-HX-CZa">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="U7W-HX-CZa" secondAttribute="trailing" id="ZyV-7t-Wj7"/>
+                            <constraint firstItem="U7W-HX-CZa" firstAttribute="top" secondItem="hql-TC-Tzv" secondAttribute="bottom" id="cZT-xj-e0d"/>
+                            <constraint firstItem="yNj-KF-WFW" firstAttribute="top" secondItem="U7W-HX-CZa" secondAttribute="bottom" id="grH-Rz-vdJ"/>
+                            <constraint firstItem="U7W-HX-CZa" firstAttribute="leading" secondItem="oav-kt-kNo" secondAttribute="leading" id="pwR-ya-e7Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CMI-ul-teT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="R82-wQ-1Bz">
+                            <connections>
+                                <action selector="btnDismissedTapped:" destination="Uft-k9-xjJ" id="E99-7o-W1K"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="i1A-bf-qNm">
+                            <connections>
+                                <action selector="btnShareTapped:" destination="Uft-k9-xjJ" id="3Xm-O8-aN3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="U7W-HX-CZa" id="hid-nl-weg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYG-xD-ADZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041" y="1631"/>
         </scene>
         <!--Image Editor View Controller-->
         <scene sceneID="FXV-AY-xhJ">
@@ -391,7 +485,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pq-ye-DFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799" y="922"/>
+            <point key="canvasLocation" x="3611" y="922"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Khx-2R-ADh">
@@ -427,7 +521,43 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KpK-56-25l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1987" y="922"/>
+            <point key="canvasLocation" x="2799" y="922"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f3s-t2-TJH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gQp-Ef-5nF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SBw-a8-08E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bF2-TR-YSr" kind="relationship" relationship="rootViewController" id="ajP-IZ-Ldb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mgw-6P-Tn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="922"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0w1-2Y-Zga">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="13z-yt-l3r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0dt-Ce-4NE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Uft-k9-xjJ" kind="relationship" relationship="rootViewController" id="zQd-in-cLf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOT-ji-Bts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="1631"/>
         </scene>
     </scenes>
     <resources>

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable class CustomView: UIView {
-
+    
     @IBOutlet weak var myTextView: UITextView!
     /*
     // Only override drawRect: if you perform custom drawing.
