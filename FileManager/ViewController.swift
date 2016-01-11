@@ -9,9 +9,12 @@
 import UIKit
 import SwiftFilePath
 import EZAudio
+import SACountingLabel
 
 class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate, EZAudioPlayerDelegate {
 
+    @IBOutlet weak var lblCountingLabel: SACountingLabel!
+    
     let mainDir = "fileMangerDir"
     let audioDir = "audioDir"
     
@@ -160,6 +163,8 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
         logTextBox.text = ""
         
         displayGraph.plotType = EZPlotType.Rolling
@@ -186,6 +191,12 @@ class ViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDelegate
         
 //        self.player = EZAudioPlayer(delegate: self)
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        lblCountingLabel.format = "%i % Completed"
+        lblCountingLabel.countFrom(0, to: 100, withDuration: 5.0, andAnimationType: SACountingLabel.AnimationType.EaseOut, andCountingType: SACountingLabel.CountingType.Custom)
     }
 
     override func didReceiveMemoryWarning() {

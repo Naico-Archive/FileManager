@@ -9,12 +9,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EZSwiftExtensions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SACountingLabel-SACountingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SACountingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,7 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>242AE5A6EAFF5533F7412F00B885851D</key>
+		<key>09EDC584F157F34D38F2EFDD4C125B51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0CEE85459F93B5CF69255688BC891AB3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>555857B46EF011B6FD034D086D7CD994</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +82,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>600491B5128F3B79BFAEB548427D32F6</key>
+		<key>66F2958D3AEA1CD2F1FEE7F19E8DED05</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>749C0EB3637427537A4440E7DDD7637C</key>
+		<key>886D82943090A3A9FB675316FA460CF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>98A9F1110B1B1F0576D4BA4526F8C5B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4483A4F73B7A4F9F1423A3509F141D0</key>
+		<key>F3CDD16BF2E95D84EA8C6AE2718A7634</key>
 		<dict>
 			<key>primary</key>
 			<true/>
